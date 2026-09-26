@@ -64,19 +64,37 @@ class CsrAdapter(descriptionSheetPath: String) extends Module {
 
   val apb = IO(new ApbPort)
   
-  // Build a sequence of block and their relative informations (serve as a base to build csrIO, csrRegs etc.)
-  val csrTable = for {
-    // go through the rows of the map sheet to find every block
+  // Parse each distinct block type's sheet exactly once. Without this,
+  // two instances of the same block type (soc.xlsx has gpio0 and gpio1,
+  // both "Gpio") would each independently re-parse that sheet into an
+  // identical Seq[Register], since the layout only depends on blockType,
+  // never on the instance.
+  val registersByBlockType: Map[String, Seq[Register]] =
+    map.column("Block").distinct.map(blockType => blockType -> parseRegisters(sheets(blockType))).toMap
+
+  // Resolve every register to its absolute address once here, and
+  // pre-compute each field's flat name once too (paired up as
+  // (name, field)) - so nothing downstream (csrTable, or the address
+  // decode further down) ever needs to re-derive an address or call
+  // flatName(...) again for the same field.
+  val registerTable: Seq[(BigInt, Seq[(String, Field)])] = for {
     row <- map.rows
     blockType = row(0)
     instName = row(1)
     baseAddr = parseHex(row(3))
-    register <- parseRegisters(sheets(blockType))
-    field <- register.fields
+    register <- registersByBlockType(blockType)
   } yield {
     val addr = baseAddr + register.offset
-    (addr, flatName(instName, register.name, field.name), field)
+    val namedFields = register.fields.map(field => flatName(instName, register.name, field.name) -> field)
+    (addr, namedFields)
   }
+
+  // Flatten registerTable down to one entry per field: used to build the
+  // csr IO bundle and the backing registers below.
+  val csrTable = for {
+    (addr, namedFields) <- registerTable
+    (name, field) <- namedFields
+  } yield (addr, name, field)
 
   // Build the CSR IO bundle: one or two ports per field, depending on its type
   // because rw/ro get one port, wotrg/rotrg get a data + trg pair and const gets no port at all)
@@ -146,53 +164,41 @@ class CsrAdapter(descriptionSheetPath: String) extends Module {
   apb.pslverr := true.B
 
   // Address decode: one when(paddr === addr) per register, combining all
-  // of that register's fields (a register can mix field types).
-  {
-    for (row <- map.rows) {
-      val blockType = row(0)
-      val instName = row(1)
-      val baseAddr = parseHex(row(3))
-      for (register <- parseRegisters(sheets(blockType))) {
-        val addr = baseAddr + register.offset
-        when(apb.paddr === addr.U) {
-          // wotrg fields have no read path; everything else does
-          val readableFields = register.fields.filter(_.typ != "wotrg")
-          // only rw/wotrg fields can be written
-          val writableFields = register.fields.filter(f => f.typ == "rw" || f.typ == "wotrg")
+  // of that register's fields (a register can mix field types). Reuses
+  // registerTable built above instead of re-resolving addresses.
+  for ((addr, namedFields) <- registerTable) {
+    when(apb.paddr === addr.U) {
+      // wotrg fields have no read path; everything else does
+      val readableFields = namedFields.filter { case (_, field) => field.typ != "wotrg" }
+      // only rw/wotrg fields can be written
+      val writableFields = namedFields.filter { case (_, field) => field.typ == "rw" || field.typ == "wotrg" }
 
-          // Read: OR every readable field, shifted into its bit position,
-          // into one word with reduce, then assign prdata once (not with
-          // repeated `apb.prdata := apb.prdata | ...` - that self-reference
-          // is what caused the earlier combinational loop).
-          when(rdAccess) {
-            if (readableFields.nonEmpty) {
-              apb.pslverr := false.B
-              val regVal = readableFields.map { field =>
-                val name = flatName(instName, register.name, field.name)
-                val fieldVal: UInt = field.typ match {
-                  case "rw"    => csrRegs(name)
-                  case "ro"    => csr(name).asUInt
-                  case "rotrg" => csr(s"${name}_data").asUInt
-                  case "const" => parseHex(field.init).U(field.width.W)
-                }
-                fieldVal << field.lsb
-              }.reduce(_ | _)
-              apb.prdata := regVal
-              for (field <- readableFields if field.typ == "rotrg") {
-                val name = flatName(instName, register.name, field.name)
-                csr(s"${name}_trg") := true.B
-              }
+      // Read: OR every readable field, shifted into its bit position,
+      // into one word with reduce, then assign prdata once
+      when(rdAccess) {
+        if (readableFields.nonEmpty) {
+          apb.pslverr := false.B
+          val regVal = readableFields.map { case (name, field) =>
+            val fieldVal: UInt = field.typ match {
+              case "rw"    => csrRegs(name)
+              case "ro"    => csr(name).asUInt
+              case "rotrg" => csr(s"${name}_data").asUInt
+              case "const" => parseHex(field.init).U(field.width.W)
             }
-          // Write: store each writable field from its slice of pwdata.
-          }.elsewhen(wrAccess) {
-            if (writableFields.nonEmpty) {
-              apb.pslverr := false.B
-              for (field <- writableFields) {
-                val name = flatName(instName, register.name, field.name)
-                csrRegs(name) := apb.pwdata(field.msb, field.lsb)
-                if (field.typ == "wotrg") csr(s"${name}_trg") := true.B
-              }
-            }
+            fieldVal << field.lsb
+          }.reduce(_ | _)
+          apb.prdata := regVal
+          for ((name, field) <- readableFields if field.typ == "rotrg") {
+            csr(s"${name}_trg") := true.B
+          }
+        }
+      // Write: store each writable field from its slice of pwdata.
+      }.elsewhen(wrAccess) {
+        if (writableFields.nonEmpty) {
+          apb.pslverr := false.B
+          for ((name, field) <- writableFields) {
+            csrRegs(name) := apb.pwdata(field.msb, field.lsb)
+            if (field.typ == "wotrg") csr(s"${name}_trg") := true.B
           }
         }
       }
