@@ -1,0 +1,38 @@
+[debug] Running TaskDef(GeneratorTest, org.scalatest.tools.Framework$$anon$1@24eff3a4, true, [SuiteSelector])
+[info] GeneratorTest:
+[info] Chisel CSR Generator
+[info] - should generate CSR adapter for soc.xlsx
+[info] Python CSR Generator
+[info] - should generate CSR adapter for soc.xlsx *** FAILED ***
+[info]   java.io.IOException: Cannot run program "verilator" (in directory "/home/frederic/Desktop/agile-hw/lab4"): Exec failed, error: 2 (No such file or directory)
+[info]   at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+[info]   at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+[info]   at os.proc.proc$lzycompute$1(ProcessOps.scala:123)
+[info]   at os.proc.proc$1(ProcessOps.scala:122)
+[info]   at os.proc.spawn(ProcessOps.scala:129)
+[info]   at os.proc.call(ProcessOps.scala:87)
+[info]   at chiseltest.simulator.VerilatorSimulator$.version$lzycompute(VerilatorSimulator.scala:55)
+[info]   at chiseltest.simulator.VerilatorSimulator$.version(VerilatorSimulator.scala:48)
+[info]   at chiseltest.simulator.VerilatorSimulator$.majorVersion(VerilatorSimulator.scala:78)
+[info]   at chiseltest.simulator.VerilatorSimulator$.createContext(VerilatorSimulator.scala:87)
+[info]   ...
+[info]   Cause: java.io.IOException: Exec failed, error: 2 (No such file or directory)
+[info]   at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+[info]   at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:295)
+[info]   at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:225)
+[info]   at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+[info]   at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+[info]   at os.proc.proc$lzycompute$1(ProcessOps.scala:123)
+[info]   at os.proc.proc$1(ProcessOps.scala:122)
+[info]   at os.proc.spawn(ProcessOps.scala:129)
+[info]   at os.proc.call(ProcessOps.scala:87)
+[info]   at chiseltest.simulator.VerilatorSimulator$.version$lzycompute(VerilatorSimulator.scala:55)
+[info]   ...
+[info] Run completed in 909 milliseconds.
+[info] Total number of tests run: 2
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 1, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[error] Failed tests:
+[error] 	GeneratorTest
+[error] (Test / testSelected) sbt.TestsFailedException: Tests unsuccessful

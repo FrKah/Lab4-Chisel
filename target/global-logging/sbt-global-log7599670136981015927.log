@@ -1,0 +1,126 @@
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(sbtMapExec b18d9600-4939-4939-9283-311cc80acfdf __a9fa8c8e-3f7e-40e7-aff6-84d3f37ca6f6, None, None)
+[debug] > Exec(testOnly GeneratorTest -- -z CSR, Some(__a9fa8c8e-3f7e-40e7-aff6-84d3f37ca6f6), Some(CommandSource(network-2)))
+[debug] unmatched Processing event for requestId Some(__a9fa8c8e-3f7e-40e7-aff6-84d3f37ca6f6): None
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"5","parents":[]},"eventTime":1790419375042,"message":"Compiling lab4","dataKind":"compile-task","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[info] compiling 1 Scala source to /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes ...
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"compiling 1 Scala source to /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes ..."})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419375235,"message":"Compiling lab4 (10%)","total":30,"progress":10,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419375236,"message":"Compiling lab4 (10%)","total":30,"progress":10,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419375984,"message":"Compiling lab4 (20%)","total":30,"progress":20,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419375985,"message":"Compiling lab4 (20%)","total":30,"progress":20,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419375999,"message":"Compiling lab4 (30%)","total":30,"progress":30,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419375999,"message":"Compiling lab4 (30%)","total":30,"progress":30,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376070,"message":"Compiling lab4 (40%)","total":30,"progress":40,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376071,"message":"Compiling lab4 (40%)","total":30,"progress":40,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376167,"message":"Compiling lab4 (50%)","total":30,"progress":50,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376168,"message":"Compiling lab4 (50%)","total":30,"progress":50,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376256,"message":"Compiling lab4 (60%)","total":30,"progress":60,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376256,"message":"Compiling lab4 (60%)","total":30,"progress":60,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376485,"message":"Compiling lab4 (70%)","total":30,"progress":70,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376486,"message":"Compiling lab4 (70%)","total":30,"progress":70,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376530,"message":"Compiling lab4 (80%)","total":30,"progress":80,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376530,"message":"Compiling lab4 (80%)","total":30,"progress":80,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376589,"message":"Compiling lab4 (90%)","total":30,"progress":90,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376589,"message":"Compiling lab4 (90%)","total":30,"progress":90,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376714,"message":"Compiling lab4 (100%)","total":30,"progress":100,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskProgress, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376714,"message":"Compiling lab4 (100%)","total":30,"progress":100,"dataKind":"compile-progress","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[info] done compiling
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"done compiling"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"5","parents":[]},"eventTime":1790419376739,"message":"Compiled lab4","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"},"errors":0,"warnings":0,"time":1697,"noOp":false}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"6","parents":[]},"eventTime":1790419376757,"message":"Compiling lab4-test","dataKind":"compile-task","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Test"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"6","parents":[]},"eventTime":1790419376782,"message":"Compiled lab4-test","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Test"},"errors":0,"warnings":0,"time":25,"noOp":true}})
+[debug] > Exec(testSelected GeneratorTest -- -z CSR, None, Some(CommandSource(network-2)))
+[debug] unmatched Processing event for requestId None: None
+[debug] Evaluating tasks: Test / testSelected
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"7","parents":[]},"eventTime":1790419376901,"message":"Compiling lab4","dataKind":"compile-task","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"7","parents":[]},"eventTime":1790419376905,"message":"Compiled lab4","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Compile"},"errors":0,"warnings":0,"time":4,"noOp":true}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"8","parents":[]},"eventTime":1790419376917,"message":"Compiling lab4-test","dataKind":"compile-task","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Test"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"8","parents":[]},"eventTime":1790419376919,"message":"Compiled lab4-test","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/frederic/Desktop/agile-hw/lab4/#lab4/Test"},"errors":0,"warnings":0,"time":2,"noOp":true}})
+[info] GeneratorTest:
+[info] Chisel CSR Generator
+[info] - should generate CSR adapter for soc.xlsx
+[info] Python CSR Generator
+[info] - should generate CSR adapter for soc.xlsx *** FAILED ***
+[info]   java.io.IOException: Cannot run program "verilator" (in directory "/home/frederic/Desktop/agile-hw/lab4"): Exec failed, error: 2 (No such file or directory)
+[info]   at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+[info]   at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+[info]   at os.proc.proc$lzycompute$1(ProcessOps.scala:123)
+[info]   at os.proc.proc$1(ProcessOps.scala:122)
+[info]   at os.proc.spawn(ProcessOps.scala:129)
+[info]   at os.proc.call(ProcessOps.scala:87)
+[info]   at chiseltest.simulator.VerilatorSimulator$.version$lzycompute(VerilatorSimulator.scala:55)
+[info]   at chiseltest.simulator.VerilatorSimulator$.version(VerilatorSimulator.scala:48)
+[info]   at chiseltest.simulator.VerilatorSimulator$.majorVersion(VerilatorSimulator.scala:78)
+[info]   at chiseltest.simulator.VerilatorSimulator$.createContext(VerilatorSimulator.scala:87)
+[info]   ...
+[info]   Cause: java.io.IOException: Exec failed, error: 2 (No such file or directory)
+[info]   at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+[info]   at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:295)
+[info]   at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:225)
+[info]   at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+[info]   at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+[info]   at os.proc.proc$lzycompute$1(ProcessOps.scala:123)
+[info]   at os.proc.proc$1(ProcessOps.scala:122)
+[info]   at os.proc.spawn(ProcessOps.scala:129)
+[info]   at os.proc.call(ProcessOps.scala:87)
+[info]   at chiseltest.simulator.VerilatorSimulator$.version$lzycompute(VerilatorSimulator.scala:55)
+[info]   ...
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"GeneratorTest:"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"Chisel CSR Generator"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"- should generate CSR adapter for soc.xlsx"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"Python CSR Generator"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"- should generate CSR adapter for soc.xlsx *** FAILED ***"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  java.io.IOException: Cannot run program \"verilator\" (in directory \"/home/frederic/Desktop/agile-hw/lab4\"): Exec failed, error: 2 (No such file or directory)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at os.proc.proc$lzycompute$1(ProcessOps.scala:123)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at os.proc.proc$1(ProcessOps.scala:122)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at os.proc.spawn(ProcessOps.scala:129)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at os.proc.call(ProcessOps.scala:87)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at chiseltest.simulator.VerilatorSimulator$.version$lzycompute(VerilatorSimulator.scala:55)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at chiseltest.simulator.VerilatorSimulator$.version(VerilatorSimulator.scala:48)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at chiseltest.simulator.VerilatorSimulator$.majorVersion(VerilatorSimulator.scala:78)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at chiseltest.simulator.VerilatorSimulator$.createContext(VerilatorSimulator.scala:87)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  ..."})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  Cause: java.io.IOException: Exec failed, error: 2 (No such file or directory)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:295)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:225)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at os.proc.proc$lzycompute$1(ProcessOps.scala:123)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at os.proc.proc$1(ProcessOps.scala:122)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at os.proc.spawn(ProcessOps.scala:129)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at os.proc.call(ProcessOps.scala:87)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  at chiseltest.simulator.VerilatorSimulator$.version$lzycompute(VerilatorSimulator.scala:55)"})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"  ..."})
+[info] Run completed in 909 milliseconds.
+[info] Total number of tests run: 2
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 1, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":3,"message":"\u001b[36mRun completed in 909 milliseconds.\u001b[0m\n\u001b[36mTotal number of tests run: 2\u001b[0m\n\u001b[36mSuites: completed 1, aborted 0\u001b[0m\n\u001b[36mTests: succeeded 1, failed 1, canceled 0, ignored 0, pending 0\u001b[0m\n\u001b[31m*** 1 TEST FAILED ***\u001b[0m"})
+[error] Failed tests:
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"Failed tests:"})
+[error] 	GeneratorTest
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"\tGeneratorTest"})
+[debug] unmatched json error for requestId None: {"code":-32603,"message":"(Test / testSelected) sbt.TestsFailedException: Tests unsuccessful"}
+[error] (Test / testSelected) sbt.TestsFailedException: Tests unsuccessful
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":1,"message":"(Test / testSelected) sbt.TestsFailedException: Tests unsuccessful"})
+[error] elapsed time: 1 s, cache 92%, 26 disk cache hits, 2 onsite tasks
+[debug] unmatched Done event for requestId None: None
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(sbtReportResult b18d9600-4939-4939-9283-311cc80acfdf, Some(b18d9600-4939-4939-9283-311cc80acfdf), Some(CommandSource(network-2)))
+[debug] unmatched Processing event for requestId Some(b18d9600-4939-4939-9283-311cc80acfdf): None
+[debug] unmatched json error for requestId Some(b18d9600-4939-4939-9283-311cc80acfdf): {"code":-33000,"message":""}
+[debug] > Exec(shell, None, None)
+[debug] jsonRpcRequest: JsonRpcRequestMessage(2.0, 75d502fb-8ca5-444d-83e4-b506c3f0492c, sbt/terminalPropertiesQuery, ""})
+[debug] jsonRpcRequest: JsonRpcRequestMessage(2.0, 11907c04-8da0-466d-b6a4-29f6a0e8655d, sbt/getTerminalAttributes, {}})
+[debug] jsonRpcRequest: JsonRpcRequestMessage(2.0, 246e9cee-d6c2-4ddb-9509-952c14df9fd6, sbt/terminalSetRawMode, {"toggle":true}})
+[debug] jsonRpcRequest: JsonRpcRequestMessage(2.0, 75c67816-df5c-4510-ab38-e6e468302334, sbt/getTerminalAttributes, {}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, sbt/readSystemIn, "")
+[debug] jsonRpcRequest: JsonRpcRequestMessage(2.0, 1738bcac-eb05-4ec1-a979-abcdb877ecc1, sbt/terminalSetRawMode, {"toggle":false}})

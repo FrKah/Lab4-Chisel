@@ -1,0 +1,149 @@
+$date
+2026-09-26T10:42+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module CsrAdapter $end
+ $var wire 1 ! csr_uart0_ctrl_en $end
+ $var wire 1 " csrRegs_0_2 $end
+ $var wire 32 # csrRegs_4_2 $end
+ $var wire 1 $ csrRegs_8_2 $end
+ $var wire 1 % apb_penable $end
+ $var wire 1 & apb_psel $end
+ $var wire 1 ' apb_pready $end
+ $var wire 1 ( csr_uart0_data_txData_trg $end
+ $var wire 32 ) csr_gpio1_dataOut $end
+ $var wire 1 * reset $end
+ $var wire 32 + apb_paddr $end
+ $var wire 32 , csr_gpio1_dataIn $end
+ $var wire 32 - csr_gpio1_dir $end
+ $var wire 32 . csrRegs_3_2 $end
+ $var wire 32 / csrRegs_7_2 $end
+ $var wire 1 0 apb_pwrite $end
+ $var wire 32 1 csr_gpio0_dataOut $end
+ $var wire 8 2 csr_uart0_data_rxData_data $end
+ $var wire 1 3 csr_uart0_ctrl_loopback $end
+ $var wire 1 4 csrRegs_2_2 $end
+ $var wire 8 5 csrRegs_6_2 $end
+ $var wire 32 6 regVal_10 $end
+ $var wire 32 7 regVal_11 $end
+ $var wire 2 8 regVal_1 $end
+ $var wire 32 9 apb_pwdata $end
+ $var wire 1 : wrAccess $end
+ $var wire 32 ; apb_prdata $end
+ $var wire 8 < regVal_2 $end
+ $var wire 1 = regVal_3 $end
+ $var wire 2 > regVal $end
+ $var wire 32 ? regVal_4 $end
+ $var wire 1 @ csr_gpio0_ctrl_en $end
+ $var wire 32 A regVal_5 $end
+ $var wire 1 B clock $end
+ $var wire 32 C regVal_6 $end
+ $var wire 1 D regVal_7 $end
+ $var wire 32 E regVal_8 $end
+ $var wire 32 F regVal_9 $end
+ $var wire 1 G csr_uart0_status_rxReady $end
+ $var wire 32 H csr_gpio0_dataIn $end
+ $var wire 1 I csrRegs_1_2 $end
+ $var wire 1 J csr_uart0_data_rxData_trg $end
+ $var wire 32 K csrRegs_5_2 $end
+ $var wire 8 L csr_uart0_data_txData_data $end
+ $var wire 32 M csr_gpio0_dir $end
+ $var wire 1 N csr_uart0_status_txEmpty $end
+ $var wire 1 O apb_pslverr $end
+ $var wire 1 P csr_gpio1_ctrl_en $end
+ $var wire 1 Q rdAccess $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+00
+b00000000000000000000000000000000 +
+b00 8
+b00000000000000000000000000000000 -
+03
+b00000000000000000000000000000000 ,
+04
+b00000000000000000000000000000000 )
+b00000000000000000000000000000000 #
+0:
+0=
+0@
+b00000000000000000000000000000000 ;
+0B
+0D
+b00000000000000000000000000000000 7
+b00000000000000000000000000000000 6
+b00000000000000000000000000000000 9
+0G
+0I
+0J
+b00000000000000000000000000000000 /
+b00000000000000000000000000000000 .
+0N
+b00000000000000000000000000000000 1
+0O
+0P
+0Q
+b00000000 L
+b00000000 <
+b00000000 2
+b00000000 5
+b00000000000000000000000000000000 K
+b00000000000000000000000000000000 M
+b00000000000000000000000000000000 F
+b00000000000000000000000000000000 H
+b00000000000000000000000000000000 C
+b00000000000000000000000000000000 E
+b00000000000000000000000000000000 ?
+b00000000000000000000000000000000 A
+0!
+0"
+0$
+0%
+0&
+0'
+0(
+0*
+b00 >
+$end
+#0
+b11011110101011011011111011101111 7
+1*
+1O
+#1
+1B
+#6
+0B
+1*
+#11
+1B
+#16
+0B
+1&
+0*
+b10000000000000000000000000000000 +
+#21
+1Q
+1B
+1'
+b11011110101011011011111011101111 ;
+0O
+#26
+0B
+1%
+#31
+0Q
+1B
+0'
+b00000000000000000000000000000000 ;
+1O
+#36
+0B
+0%
+0&
+b00000000000000000000000000000000 +

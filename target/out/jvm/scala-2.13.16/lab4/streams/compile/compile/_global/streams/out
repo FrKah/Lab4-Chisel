@@ -1,0 +1,4 @@
+[error] /home/frederic/Desktop/agile-hw/lab4/src/main/scala/MaxFinderMain.scala:5:9: not found: type MaxFinder
+[error]     new MaxFinder(4, 8),
+[error]         ^
+[error] one error found

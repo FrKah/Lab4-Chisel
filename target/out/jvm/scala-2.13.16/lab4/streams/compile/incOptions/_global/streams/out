@@ -1,0 +1,35 @@
+[debug] Created transactional ClassFileManager with tempDir = /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes.bak
+[debug] About to delete class files:
+[debug] 	Field$.class
+[debug] 	Field.class
+[debug] 	CsrAdapter.class
+[debug] 	CsrParsing.class
+[debug] 	Register.class
+[debug] 	CsrAdapter$delayedInit$body.class
+[debug] 	ApbPort.class
+[debug] 	CsrParsing$.class
+[debug] 	Register$.class
+[debug] 	CsrAdapter$.class
+[debug] We backup class files:
+[debug] 	Field$.class
+[debug] 	Field.class
+[debug] 	CsrAdapter.class
+[debug] 	CsrParsing.class
+[debug] 	Register.class
+[debug] 	CsrAdapter$delayedInit$body.class
+[debug] 	ApbPort.class
+[debug] 	CsrParsing$.class
+[debug] 	Register$.class
+[debug] 	CsrAdapter$.class
+[debug] Registering generated classes:
+[debug] 	Field$.class
+[debug] 	Field.class
+[debug] 	CsrAdapter.class
+[debug] 	CsrParsing.class
+[debug] 	Register.class
+[debug] 	CsrAdapter$delayedInit$body.class
+[debug] 	ApbPort.class
+[debug] 	CsrParsing$.class
+[debug] 	Register$.class
+[debug] 	CsrAdapter$.class
+[debug] Removing the temporary directory used for backing up class files: /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes.bak

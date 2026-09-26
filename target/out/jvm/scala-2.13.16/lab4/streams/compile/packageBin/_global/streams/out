@@ -1,0 +1,30 @@
+[debug] Packaging /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/lab4_2.13-0.1.0-SNAPSHOT.jar ...
+[debug] Input file mappings:
+[debug] 	ApbPort.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/ApbPort.class
+[debug] 	CsrAdapter$.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/CsrAdapter$.class
+[debug] 	CsrAdapter$delayedInit$body.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/CsrAdapter$delayedInit$body.class
+[debug] 	CsrAdapter.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/CsrAdapter.class
+[debug] 	CsrParsing$.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/CsrParsing$.class
+[debug] 	CsrParsing.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/CsrParsing.class
+[debug] 	Field$.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/Field$.class
+[debug] 	Field.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/Field.class
+[debug] 	Register$.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/Register$.class
+[debug] 	Register.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/Register.class
+[debug] 	help/DynamicBundle.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/help/DynamicBundle.class
+[debug] 	help/Sheet$.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/help/Sheet$.class
+[debug] 	help/Sheet.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/classes/help/Sheet.class
+[debug] Done packaging.
+[debug] wrote ${OUT}/jvm/scala-2.13.16/lab4/lab4_2.13-0.1.0-SNAPSHOT.jar

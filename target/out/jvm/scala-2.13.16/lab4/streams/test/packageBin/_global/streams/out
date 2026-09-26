@@ -1,0 +1,16 @@
+[debug] Packaging /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/lab4_2.13-0.1.0-SNAPSHOT-tests.jar ...
+[debug] Input file mappings:
+[debug] 	ApbMasterBfm.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/test-classes/ApbMasterBfm.class
+[debug] 	GeneratorTest.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/test-classes/GeneratorTest.class
+[debug] 	PythonSocAdapter$$anon$2.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/test-classes/PythonSocAdapter$$anon$2.class
+[debug] 	PythonSocAdapter.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/test-classes/PythonSocAdapter.class
+[debug] 	PythonSocAdapterWrapper$$anon$1.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/test-classes/PythonSocAdapterWrapper$$anon$1.class
+[debug] 	PythonSocAdapterWrapper.class
+[debug] 	  /home/frederic/Desktop/agile-hw/lab4/target/out/jvm/scala-2.13.16/lab4/test-classes/PythonSocAdapterWrapper.class
+[debug] Done packaging.
+[debug] wrote ${OUT}/jvm/scala-2.13.16/lab4/lab4_2.13-0.1.0-SNAPSHOT-tests.jar

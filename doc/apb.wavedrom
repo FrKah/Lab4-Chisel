@@ -1,0 +1,16 @@
+{ signal: [
+
+  { name: 'clk', wave: 'P...|.....'},
+  ['Master',
+  { name: 'psel', wave: '01.0|1...0'},
+  { name: 'penable', wave: '0.10|.1..0'},
+  {},
+  { name: 'pwrite', wave: 'x1.x|0...x'},
+  { name: 'paddr', wave: 'x3.x|4...x', data: ['addr0', 'addr1']},
+  { name: 'pwdata', wave: 'x5.x|.....', data: ['wdata0']}],
+  {},['Target',
+  { name: 'pready', wave: '0.10|...10'},
+  {name: 'pslverr', wave: 'x.0x|...0x'},
+  {name: 'prdata', wave: 'x...|...5x', data: ['rdata1']}]
+  
+],config: { hscale: 1.5 }, foot: {text: 'Example of an APB write transaction and an APB read transaction with wait cycles.'}}
