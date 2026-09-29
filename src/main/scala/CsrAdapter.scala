@@ -64,19 +64,9 @@ class CsrAdapter(descriptionSheetPath: String) extends Module {
 
   val apb = IO(new ApbPort)
   
-  // Parse each distinct block type's sheet exactly once. Without this,
-  // two instances of the same block type (soc.xlsx has gpio0 and gpio1,
-  // both "Gpio") would each independently re-parse that sheet into an
-  // identical Seq[Register], since the layout only depends on blockType,
-  // never on the instance.
   val registersByBlockType: Map[String, Seq[Register]] =
     map.column("Block").distinct.map(blockType => blockType -> parseRegisters(sheets(blockType))).toMap
 
-  // Resolve every register to its absolute address once here, and
-  // pre-compute each field's flat name once too (paired up as
-  // (name, field)) - so nothing downstream (csrTable, or the address
-  // decode further down) ever needs to re-derive an address or call
-  // flatName(...) again for the same field.
   val registerTable: Seq[(BigInt, Seq[(String, Field)])] = for {
     row <- map.rows
     blockType = row(0)
@@ -141,11 +131,7 @@ class CsrAdapter(descriptionSheetPath: String) extends Module {
     }
   }
 
-  // APB handshake: psel+penable together *are* the access phase, by the
-  // APB spec's own definition (psel alone is the setup phase). Driving
-  // pready straight off that - no registers needed - means every
-  // transaction completes in the minimum 2 cycles (setup, access), with
-  // zero wait states.
+  // APB handshake:
   val access = apb.psel && apb.penable
   apb.pready := access
 
