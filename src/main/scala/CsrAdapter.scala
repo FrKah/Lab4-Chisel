@@ -141,23 +141,13 @@ class CsrAdapter(descriptionSheetPath: String) extends Module {
     }
   }
 
-  // APB handshake: psel (+pwrite/!pwrite) sets wrAccess/rdAccess high one
-  // cycle later - that high cycle is the access phase - then it clears
-  // itself the cycle after, so each stays high for exactly one cycle
-  // (a "pulse") per transaction, with no wait states.
-  val wrAccess = RegInit(false.B)
-  val rdAccess = RegInit(false.B)
-  when(wrAccess) {
-    wrAccess := false.B
-  }.elsewhen(apb.psel && apb.pwrite) {
-    wrAccess := true.B
-  }
-  when(rdAccess) {
-    rdAccess := false.B
-  }.elsewhen(apb.psel && !apb.pwrite) {
-    rdAccess := true.B
-  }
-  apb.pready := wrAccess || rdAccess
+  // APB handshake: psel+penable together *are* the access phase, by the
+  // APB spec's own definition (psel alone is the setup phase). Driving
+  // pready straight off that - no registers needed - means every
+  // transaction completes in the minimum 2 cycles (setup, access), with
+  // zero wait states.
+  val access = apb.psel && apb.penable
+  apb.pready := access
 
   // Defaults: no data, error unless a matching address clears it below.
   apb.prdata := 0.U
@@ -167,15 +157,24 @@ class CsrAdapter(descriptionSheetPath: String) extends Module {
   // of that register's fields (a register can mix field types). Reuses
   // registerTable built above instead of re-resolving addresses.
   for ((addr, namedFields) <- registerTable) {
-    when(apb.paddr === addr.U) {
+    when(access && apb.paddr === addr.U) {
       // wotrg fields have no read path; everything else does
       val readableFields = namedFields.filter { case (_, field) => field.typ != "wotrg" }
       // only rw/wotrg fields can be written
       val writableFields = namedFields.filter { case (_, field) => field.typ == "rw" || field.typ == "wotrg" }
 
+      // Write: store each writable field from its slice of pwdata.
+      when(apb.pwrite) {
+        if (writableFields.nonEmpty) {
+          apb.pslverr := false.B
+          for ((name, field) <- writableFields) {
+            csrRegs(name) := apb.pwdata(field.msb, field.lsb)
+            if (field.typ == "wotrg") csr(s"${name}_trg") := true.B
+          }
+        }
       // Read: OR every readable field, shifted into its bit position,
       // into one word with reduce, then assign prdata once
-      when(rdAccess) {
+      }.otherwise {
         if (readableFields.nonEmpty) {
           apb.pslverr := false.B
           val regVal = readableFields.map { case (name, field) =>
@@ -190,15 +189,6 @@ class CsrAdapter(descriptionSheetPath: String) extends Module {
           apb.prdata := regVal
           for ((name, field) <- readableFields if field.typ == "rotrg") {
             csr(s"${name}_trg") := true.B
-          }
-        }
-      // Write: store each writable field from its slice of pwdata.
-      }.elsewhen(wrAccess) {
-        if (writableFields.nonEmpty) {
-          apb.pslverr := false.B
-          for ((name, field) <- writableFields) {
-            csrRegs(name) := apb.pwdata(field.msb, field.lsb)
-            if (field.typ == "wotrg") csr(s"${name}_trg") := true.B
           }
         }
       }
